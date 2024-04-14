@@ -31,4 +31,4 @@ EXPOSE 3000
 
 # サーバーを起動
 RUN npm run build
-RUN npm start
+CMD ["npm",  "start"]
