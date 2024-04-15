@@ -7,6 +7,7 @@ services:
   app:
     # 現在のディレクトリにあるDockerfileを使用して、コンテナのイメージをビルドします。
     build: ./
+    platform: linux/amd64
 
     # コンテナが起動したら実行されるコマンド。ここでは開発サーバーを起動します。
     # command: npm run dev
@@ -25,4 +26,4 @@ services:
     tty: true
 
     # ECRのリポジトリのイメージ
-    image: 905418423138.dkr.ecr.ap-northeast-1.amazonaws.com/mensetsu-repo:0.0.1
+    image: 905418423138.dkr.ecr.ap-northeast-1.amazonaws.com/mensetsu-repo:0.0.3

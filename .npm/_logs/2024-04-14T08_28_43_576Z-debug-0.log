@@ -32,3 +32,28 @@
 31 silly logfile done cleaning log files
 32 http fetch GET 200 https://registry.npmjs.org/npm 118ms
 33 http fetch GET 200 https://registry.npmjs.org/npm 133ms
+34 timing command:run-script Completed in 2483192ms
+35 timing command:start Completed in 2483209ms
+36 notice
+36 notice New [32mpatch[39m version of npm available! [31m10.5.0[39m -> [32m10.5.2[39m
+36 notice Changelog: [36mhttps://github.com/npm/cli/releases/tag/v10.5.2[39m
+36 notice Run [32mnpm install -g npm@10.5.2[39m to update!
+36 notice
+37 verbose stack Error: command failed
+37 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/@npmcli/promise-spawn/lib/index.js:53:27)
+37 verbose stack     at ChildProcess.emit (node:events:519:28)
+37 verbose stack     at maybeClose (node:internal/child_process:1105:16)
+37 verbose stack     at ChildProcess._handle.onexit (node:internal/child_process:305:5)
+38 verbose pkgid chat-vrm@0.1.0
+39 verbose cwd /home/ChatVRM
+40 verbose Linux 5.15.49-linuxkit
+41 verbose node v21.7.3
+42 verbose npm  v10.5.0
+43 error path /home/ChatVRM
+44 error command failed
+45 error signal SIGTERM
+46 error command sh -c next build && next start
+47 verbose exit 1
+48 timing npm Completed in 2483288ms
+49 verbose code 1
+50 error A complete log of this run can be found in: /root/.npm/_logs/2024-04-14T08_28_43_576Z-debug-0.log
