@@ -79,14 +79,14 @@ export const Settings = ({
               ※利用しているモデルはChatGPT API (GPT-3.5)です。
             </div>
           </div>
-          <div className="my-40">
+          {/* <div className="my-40">
             <div className="my-16 typography-20 font-bold">
               キャラクターモデル
             </div>
             <div className="my-8">
               <TextButton onClick={onClickOpenVrmFile}>VRMを開く</TextButton>
             </div>
-          </div>
+          </div> */}
           <div className="my-40">
             <div className="my-8">
               <div className="my-16 typography-20 font-bold">
