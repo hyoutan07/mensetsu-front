@@ -1,0 +1,39 @@
+{
+    "family": "mensetsu-app-task-definition",
+    "networkMode": "awsvpc",
+    "containerDefinitions": [
+      {
+        "name": "mensetsu-app-container",
+        "image": "httpd",
+        "portMappings": [
+          {
+            "containerPort": 3000,
+            "hostPort": 3000,
+            "protocol": "tcp"
+          }
+        ],
+        "essential": true,
+        "logConfiguration": {
+            "logDriver": "awslogs",
+            "options": {
+                "awslogs-create-group": "true",
+                "awslogs-group": "/ecs/mensetsu-app-task-definition",
+                "awslogs-region": "ap-northeast-1",
+                "awslogs-stream-prefix": "ecs"
+            },
+            "secretOptions": []
+        }
+      }
+    ],
+    "runtimePlatform": {
+      "cpuArchitecture": "X86_64",
+      "operatingSystemFamily": "LINUX"
+    },
+    "requiresCompatibilities": [
+      "FARGATE"
+    ],
+    "executionRoleArn": "ecsTaskExecutionRole",
+    "cpu": "256",
+    "memory": "512"
+}
+  

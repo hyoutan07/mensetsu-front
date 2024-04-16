@@ -17,21 +17,21 @@ RUN apt-get update && apt-get install -y \
 
 # 開発時は下はコメントアウト
 
-# # ローカルのプロジェクトファイルをコンテナ内にコピーします。
-# COPY . .
+# ローカルのプロジェクトファイルをコンテナ内にコピーします。
+COPY . .
 
-# # コンテナ内での作業ディレクトリを設定します。
-# WORKDIR /home/ChatVRM
+# コンテナ内での作業ディレクトリを設定します。
+WORKDIR /home/ChatVRM
 
-# # browserslistデータベースを最新のバージョンに更新します。
-# RUN npx -y update-browserslist-db@latest
+# browserslistデータベースを最新のバージョンに更新します。
+RUN npx -y update-browserslist-db@latest
 
-# # アプリケーションに必要なNode.jsモジュールをインストールします。
-# RUN npm install
+# アプリケーションに必要なNode.jsモジュールをインストールします。
+RUN npm install
 
-# # コンテナがポート3000をリッスンすることを示します。これは文書の目的であり、実際にポートを公開するわけではありません。
-# EXPOSE 3000
+# コンテナがポート3000をリッスンすることを示します。これは文書の目的であり、実際にポートを公開するわけではありません。
+EXPOSE 3000
 
-# # サーバーを起動
-# RUN npm run build
-# CMD ["npm",  "start"]
+# サーバーを起動
+RUN npm run build
+CMD ["npm",  "start"]

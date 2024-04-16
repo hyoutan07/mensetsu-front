@@ -2,3 +2,9 @@
 .bash_history
 .DS_Store
 .node_repl_history
+.github/workflows/.secrets
+*/*/.secrets
+*/.secrets
+*.secrets
+.secrets
+./*/*/.secrets
