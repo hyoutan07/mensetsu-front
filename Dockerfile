@@ -14,13 +14,6 @@ RUN apt-get update && apt-get install -y \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* 
 
-# GitHubからプロジェクトをクローンします。
-RUN git clone https://github.com/pixiv/ChatVRM
-
-# プロジェクトのディレクトリに作業ディレクトリを変更します。
-WORKDIR /home/ChatVRM
-
-
 
 # 開発時は下はコメントアウト
 
