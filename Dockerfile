@@ -20,15 +20,25 @@ RUN git clone https://github.com/pixiv/ChatVRM
 # プロジェクトのディレクトリに作業ディレクトリを変更します。
 WORKDIR /home/ChatVRM
 
-# browserslistデータベースを最新のバージョンに更新します。
-RUN npx -y update-browserslist-db@latest
 
-# アプリケーションに必要なNode.jsモジュールをインストールします。
-RUN npm install
 
-# コンテナがポート3000をリッスンすることを示します。これは文書の目的であり、実際にポートを公開するわけではありません。
-EXPOSE 3000
+# 開発時は下はコメントアウト
 
-# サーバーを起動
-RUN npm run build
-CMD ["npm",  "start"]
+# # ローカルのプロジェクトファイルをコンテナ内にコピーします。
+# COPY . .
+
+# # コンテナ内での作業ディレクトリを設定します。
+# WORKDIR /home/ChatVRM
+
+# # browserslistデータベースを最新のバージョンに更新します。
+# RUN npx -y update-browserslist-db@latest
+
+# # アプリケーションに必要なNode.jsモジュールをインストールします。
+# RUN npm install
+
+# # コンテナがポート3000をリッスンすることを示します。これは文書の目的であり、実際にポートを公開するわけではありません。
+# EXPOSE 3000
+
+# # サーバーを起動
+# RUN npm run build
+# CMD ["npm",  "start"]
