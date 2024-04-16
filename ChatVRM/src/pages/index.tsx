@@ -27,6 +27,14 @@ export default function Home() {
   const [chatLog, setChatLog] = useState<Message[]>([]);
   const [assistantMessage, setAssistantMessage] = useState("");
 
+
+  // リアルタイムな対話に必要な設定
+  const [isStreaming, setIsStreaming] = useState<boolean | null>(false); // ストリームしているかどうか
+  const [topicNumber, setTopicNumber] = useState<number | null>(6); // トピック番号
+  const [sentencesLength, setSentencesLength] = useState<number | null>(0); //ストリーミング処理の最後の区切りの回数
+  const [speakTimes, setSpeakTimes] = useState<number>(0); //speakの処理の回数
+  const [isFirstStartRec, setIsFirstStartRec] = useState<boolean>(false); // 一番はじめの録音を始めているかどうか
+
   useEffect(() => {
     if (window.localStorage.getItem("chatVRMParams")) {
       const params = JSON.parse(
