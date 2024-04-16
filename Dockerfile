@@ -14,10 +14,13 @@ RUN apt-get update && apt-get install -y \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* 
 
-# GitHubからプロジェクトをクローンします。
-RUN git clone https://github.com/pixiv/ChatVRM
 
-# プロジェクトのディレクトリに作業ディレクトリを変更します。
+# 開発時は下はコメントアウト
+
+# ローカルのプロジェクトファイルをコンテナ内にコピーします。
+COPY . .
+
+# コンテナ内での作業ディレクトリを設定します。
 WORKDIR /home/ChatVRM
 
 # browserslistデータベースを最新のバージョンに更新します。
