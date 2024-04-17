@@ -8,3 +8,6 @@
 *.secrets
 .secrets
 ./*/*/.secrets
+.config
+.aws
+.amplify

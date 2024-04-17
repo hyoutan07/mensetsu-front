@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-chatvrmtest-dev-9fd45-authRole",
+      "UnauthRoleArn": "arn:aws:iam::905418423138:role/amplify-chatvrmtest-dev-9fd45-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::905418423138:role/amplify-chatvrmtest-dev-9fd45-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-chatvrmtest-dev-9fd45-deployment",
+      "UnauthRoleName": "amplify-chatvrmtest-dev-9fd45-unauthRole",
+      "StackName": "amplify-chatvrmtest-dev-9fd45",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:905418423138:stack/amplify-chatvrmtest-dev-9fd45/b1980cd0-fc96-11ee-9323-0a745c978091",
+      "AmplifyAppId": "dfkm5ulm48jlr"
+    },
+    "categories": {
+      "api": {
+        "chatvrmtest": {}
+      },
+      "auth": {
+        "chatvrmtest243731d8": {}
+      }
+    }
+  }
+}

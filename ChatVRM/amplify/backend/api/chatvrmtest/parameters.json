@@ -1,0 +1,12 @@
+{
+  "AppSyncApiName": "chatvrmtest",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authchatvrmtest243731d8",
+      "Outputs.UserPoolId"
+    ]
+  },
+  "AuthModeLastUpdated": "2024-04-17T09:39:41.646Z"
+}
